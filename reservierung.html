@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservierungen</title>
+</head>
+
+<body>
+  <header>
+    <H1> Reservierungen</H1>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="reservierung.html" aria-current="page">Reservierungen</a></li>
+        <li><a href="speisekarte.html">Speisekarte</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <form action="/reservieren" method="post">
+
+
+      <fieldset>
+        <legend>Ihre Kontaktdaten</legend>
+        <label for="vorname">Vorname:</label><br>
+        <input type="text" id="vorname" name="vorname" required><br><br>
+
+        <label for="nachname">Nachname:</label><br>
+        <input type="text" id="nachname" name="nachname" required><br><br>
+
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefon">Telefon:</label><br>
+        <input type="tel" id="telefon" name="telefon" required><br><br>
+      </fieldset>
+      <br>
+
+
+      <fieldset>
+        <legend>Reservierungsdetails</legend>
+
+        <label for="datum">Datum:</label><br>
+        <input type="date" id="datum" name="datum" min="<?= date('Y-m-d') ?>" required><br><br>
+
+        <label for="uhrzeit">Uhrzeit:</label><br>
+        <select id="uhrzeit" name="uhrzeit" required>
+          <option value="">--Bitte wählen--</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+          <option value="19:00">19:00</option>
+          <option value="20:00">20:00</option>
+          <option value="21:00">21:00</option>
+        </select><br><br>
+
+        <label for="personen">Personenzahl:</label><br>
+        <input type="number" id="personen" name="personen" min="1" max="12" required><br><br>
+      </fieldset>
+      <br>
+
+      <fieldset>
+        <legend>Anlass</legend>
+        <input type="radio" id="gemuetlich" name="occasion" value="Gemütlich" required>
+        <label for="gemuetlich">Gemütlich</label><br>
+
+        <input type="radio" id="business" name="occasion" value="Business">
+        <label for="business">Business</label><br>
+
+        <input type="radio" id="feier" name="occasion" value="Feier">
+        <label for="feier">Feier</label><br>
+
+        <input type="radio" id="romantisch" name="occasion" value="Romantisch">
+        <label for="romantisch">Romantisch</label><br>
+      </fieldset>
+      <br>
+
+
+      <fieldset>
+        <legend>Besondere Wünsche</legend>
+        <input type="checkbox" id="fenster" name="preferences[]" value="Fensterplatz">
+        <label for="fenster">Fensterplatz</label><br>
+
+        <input type="checkbox" id="ruhig" name="preferences[]" value="Ruhig">
+        <label for="ruhig">Ruhig</label><br>
+
+        <input type="checkbox" id="rollstuhl" name="preferences[]" value="Rollstuhlgerecht">
+        <label for="rollstuhl">Rollstuhlgerecht</label><br>
+
+        <input type="checkbox" id="kinderstuhl" name="preferences[]" value="Kinderstuhl">
+        <label for="kinderstuhl">Kinderstuhl</label><br>
+      </fieldset>
+      <br>
+
+
+      <fieldset>
+        <legend>Weitere Angaben</legend>
+
+        <label for="allergien">Allergien / Unverträglichkeiten:</label><br>
+        <textarea id="allergien" name="allergien" rows="3" placeholder="z. B. Nüsse, Laktose..."></textarea><br><br>
+
+        <label for="wünsche">Weitere Wünsche:</label><br>
+        <textarea id="wünsche" name="wuensche" rows="3"
+          placeholder="z. B. Geburtstagskuchen, Musik etc."></textarea><br>
+      </fieldset>
+      <br>
+
+
+      <fieldset>
+        <legend>Rechtliches</legend>
+        <input type="checkbox" id="agb" name="agb" required>
+        <label for="agb">Ich akzeptiere die AGB.</label><br>
+
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Ich möchte den Newsletter abonnieren.</label><br>
+      </fieldset>
+      <br>
+
+      <button type="submit">Reservieren</button>
+    </form>
+  </main>
+</body>
+
+</html>
