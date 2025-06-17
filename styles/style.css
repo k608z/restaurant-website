@@ -1,15 +1,174 @@
-h1 {
-    color: #ce4114;
+/* === Grundlayout === */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #230a03;
+  color: #fff599;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+main h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff599;
 }
 
-h2 {
-    color: #ca5108;
+main img {
+  display: block;
+  margin: 20px auto;
+}
+/* === Header & Navigation === */
+header {
+  background-color: #8c1d0c;
+  padding: 20px;
+  text-align: center;
 }
 
-p {
-    color: #230a03;
+header h1 {
+  margin-bottom: 10px;
+  color: #fff599;
+  font-size: 28px;
 }
 
-body{
-  background-color: #ffe07e;
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff599;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a[aria-current="page"] {
+  color: #ce4114;
+}
+
+/* === Main Content === */
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #8c1d0c;
+  border-radius: 6px;
+}
+
+/* === Formulare === */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  border: 1px solid #ce4114;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 5px;
+  color: #fff599;
+}
+
+label {
+  margin-top: 10px;
+  display: block;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ce4114;
+  border-radius: 4px;
+  background-color: #230a03;
+  color: #fff599;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+button[type="submit"] {
+  background-color: #ce4114;
+  color: #fff599;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* === Timeline (Über uns) === */
+.timeline {
+  padding-left: 20px;
+  border-left: 3px solid #ce4114;
+  margin-bottom: 30px;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+}
+
+.timeline-item time {
+  font-weight: bold;
+  color: #fff599;
+  margin-right: 10px;
+}
+
+/* === Team Section === */
+.team h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #fff599;
+}
+
+.team-member {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #230a03;
+  border: 1px solid #ce4114;
+  border-radius: 5px;
+}
+
+.team-member h3 {
+  margin-bottom: 5px;
+  color: #fff599;
+}
+
+.team-member p {
+  margin-bottom: 5px;
+}
+
+.team-member img {
+  max-width: 100px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+meter {
+  width: 100%;
+  height: 15px;
+}
+
+/* === Footer / Copyright === */
+body > br + * {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #fff599;
 }
