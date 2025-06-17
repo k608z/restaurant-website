@@ -172,3 +172,11 @@ body > br + * {
   font-size: 14px;
   color: #fff599;
 }
+
+input{
+    padding: 2px;
+}
+
+textarea{
+    padding: 2px;
+}
