@@ -112,7 +112,7 @@ button[type="submit"] {
   margin-top: 15px;
 }
 
-/* === Timeline (Über uns) === */
+/* === Timeline  === */
 .timeline {
   padding-left: 20px;
   border-left: 3px solid #ce4114;
@@ -179,4 +179,47 @@ input{
 
 textarea{
     padding: 2px;
+}
+
+.features-section {
+  padding: 40px 20px;
+}
+
+.features-section h2 {
+  text-align: center;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card {
+  transition: transform 0.3s ease
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.featured {
+  border: 2px solid gold;
 }
